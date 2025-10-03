@@ -6,7 +6,8 @@ Building a modern data warehouse in MySQL, including ETL processes, data modelli
 ## 🏗️ Data Architecture
 
 The data architecture for this project follows Medallion Architecture **Bronze**, **Silver**, and **Gold** layers:
-![Data Architecture](docs/data_architecture.png)
+![Data Architecture Diagram](https://github.com/user-attachments/assets/d91caa87-290f-4cd4-8c92-2766537ba3e4)
+
 
 1. **Bronze Layer**: Stores raw data as-is from the source systems. Data is ingested from CSV Files into SQL Server Database.
 2. **Silver Layer**: This layer includes data cleansing, standardisation and normalisation processes to prepare data for analysis.
