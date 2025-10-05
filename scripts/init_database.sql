@@ -4,7 +4,7 @@ Create Databases for Medallion Architecture (MySQL version)
 =============================================================
 Script Purpose:
     This script creates three separate databases — 'bronze', 'silver', and 'gold' — 
-    to represent the medallion stages. This mirrors the schemas used in SQL Server.
+    to represent the medallion stages. 
     
 WARNING:
     Running this script will drop and recreate these databases if they already exist. 
