@@ -1,22 +1,28 @@
 /*
 =============================================================
-Create Databases for Medallion Architecture (MySQL version)
+Create Database and Schemas for Medallion Architecture 
 =============================================================
 Script Purpose:
-    This script creates three separate databases — 'bronze', 'silver', and 'gold' — 
-    to represent the medallion stages. 
+    This script creates a new database named 'DataWarehouse' after checking if it already exists. 
+    If the database exists, it is dropped and recreated. Additionally, the script sets up three schemas 
+    within the database: 'bronze', 'silver', and 'gold'.
     
 WARNING:
-    Running this script will drop and recreate these databases if they already exist. 
-    All data will be permanently deleted. Proceed with caution and ensure you have backups.
+    Running this script will drop the entire 'DataWarehouse' database if it exists. 
+    All data in the database will be permanently deleted. Proceed with caution 
+    and ensure you have proper backups before running this script.
 */
 
--- Drop and recreate each medallion stage database
-DROP DATABASE IF EXISTS bronze;
-CREATE DATABASE bronze;
+-- Connect to the default database (postgres) before running this part
+-- Drop the database if it exists
+DROP DATABASE IF EXISTS "DataWarehouse";
 
-DROP DATABASE IF EXISTS silver;
-CREATE DATABASE silver;
+-- Create the new database
+CREATE DATABASE "DataWarehouse";
 
-DROP DATABASE IF EXISTS gold;
-CREATE DATABASE gold;
+-- Now connect to the new "DataWarehouse" database manually in pgAdmin before running the next section
+
+-- Create each medallion stage database
+CREATE SCHEMA IF NOT EXISTS bronze;
+CREATE SCHEMA IF NOT EXISTS silver;
+CREATE SCHEMA IF NOT EXISTS gold;
