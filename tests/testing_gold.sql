@@ -1,3 +1,35 @@
+/*
+===============================================================================
+Data Integration and Modelling - Silver to Gold Layer
+===============================================================================
+Script Purpose:
+    This script performs data integration and dimensional modelling to transform
+    clean data from the Silver layer into a structured star schema in the Gold layer.
+    
+    Operations include:
+    - Integrating data from multiple Silver layer tables
+    - Creating dimension tables with surrogate keys
+    - Resolving data conflicts using master data management rules
+    - Building fact tables with foreign key relationships
+    - Testing for duplicates and referential integrity
+    - Standardising column names for business user consumption
+    - Filtering data based on business requirements
+    
+Usage Notes:
+    - This script documents the dimensional modelling performed on Silver layer data
+    - Each section includes exploration queries followed by final view/table creation
+    - Dimension tables are created before fact tables to establish surrogate keys
+    - Run validation queries at the end of each section to verify data integrity
+    
+Data Models Created:
+    Dimensions:
+    - gold.dim_customers (customer entity with integrated demographics and location)
+    - gold.dim_products (product entity with category information)
+    
+    Facts:
+    - gold.fact_sales (sales transactions with dimension foreign keys)
+===============================================================================
+*/
 
 
 SELECT *
