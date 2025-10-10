@@ -6,7 +6,8 @@ Building a modern data warehouse in PostgreSQL, including ETL processes, data mo
 ## 🏗️ Data Architecture
 
 The data architecture for this project follows Medallion Architecture **Bronze**, **Silver**, and **Gold** layers:
-![Data Architecture Diagram](https://github.com/user-attachments/assets/1b4cd2fd-dd85-48f2-9684-8833dc67fcba)
+<img width="786" height="496" alt="Data Architecture Diagram" src="https://github.com/user-attachments/assets/5b2dee08-babc-4fb9-8f06-c8fab73451bc" />
+
 
 
 
