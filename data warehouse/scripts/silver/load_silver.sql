@@ -1,3 +1,17 @@
+/*
+===============================================================================
+Load Silver Layer (Bronze -> Silver)
+===============================================================================
+Script Purpose:
+    This sript performs the ETL (Extract, Transform, Load) process to 
+    populate the 'silver' schema tables from the 'bronze' schema.
+	Actions Performed:
+		- Truncates Silver tables.
+		- Inserts transformed and cleansed data from Bronze into Silver tables.
+===============================================================================
+*/
+
+
 -- Loading crm_cust_info
 TRUNCATE TABLE silver.crm_cust_info;
 
@@ -126,8 +140,8 @@ CASE
 	ELSE bdate
 END as bdate, -- set future birthdates to NULL
 CASE 
-	WHEN UPPER(TRIM(gen)) IN ('F', 'FEMALE') THEN 'Female'
-	WHEN UPPER(TRIM(gen)) IN ('M', 'MALE') THEN 'Male'
+	WHEN UPPER(TRIM(gen)) IN ('F', 'Female') THEN 'Female'
+	WHEN UPPER(TRIM(gen)) IN ('M', 'Male') THEN 'Male'
 	ELSE 'Unknown'
 END as gen -- normalised gender values and handled unknown cases
 FROM bronze.erp_cust_az12;
@@ -153,7 +167,7 @@ FROM bronze.erp_loc_a101;
 
 
 
--- Loading erp product category (g1v2)
+-- Loading product category (g1v2)
 TRUNCATE TABLE silver.erp_px_cat_g1v2;
 
 INSERT INTO silver.erp_px_cat_g1v2(
