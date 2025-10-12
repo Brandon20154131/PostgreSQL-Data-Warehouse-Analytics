@@ -62,21 +62,22 @@ data-warehouse-project/
 ├── analytics/                          # SQL script for advanced analytics
 │   ├── master_EDA.sql                  # Master script that covers various analyses such as database exploration, measures and metrics, time-based trends, cumulative analytics, segmentation and more. 
 │
-├── datasets/                           # Raw datasets used for the project (ERP and CRM data)
-│
-├── docs/                               # Project documentation and architecture details
-│   ├── data_architecture.drawio        # Draw.io file shows the project's architecture
-│   ├── data_catalog.md                 # Catalog of datasets, including field descriptions and metadata
-│   ├── data_flow_diagram.drawio        # Draw.io file for the data flow diagram
-│   ├── data_models.drawio              # Draw.io file for data models (star schema)
-│
-├── scripts/                            # SQL scripts for ETL and transformations
-│   ├── bronze/                         # Scripts for extracting and loading raw data
-│   ├── silver/                         # Scripts for cleaning and transforming data
-│   ├── gold/                           # Scripts for creating analytical models
-│
-├── tests/                              # Test scripts and quality files
-│
+├── data warehouse/                     # SQL script for advanced analytics
+|   ├── datasets/                       # Raw datasets used for the project (ERP and CRM data)
+|   |
+│   ├── docs/                           # Project documentation and architecture details
+│   |   ├── data_architecture.drawio    # Draw.io file shows the project's architecture
+│   |   ├── data_catalog.md             # Catalog of datasets, including field descriptions and metadata
+│   |   ├── data_flow_diagram.drawio    # Draw.io file for the data flow diagram
+│   |   ├── data_models.drawio          # Draw.io file for data models (star schema)
+|   |
+|   ├── scripts/                        # SQL scripts for ETL and transformations
+|   │   ├── bronze/                     # Scripts for extracting and loading raw data
+|   │   ├── silver/                     # Scripts for cleaning and transforming data
+|   │   ├── gold/                       # Scripts for creating analytical models
+|   │
+|   ├── tests/                          # Test scripts and quality files
+|   │
 ├── README.md                           # Project overview and instructions
 ├── LICENSE                             # License information for the repository
 ```
