@@ -1,9 +1,13 @@
--- ==================================================================================================
--- DDL Script: Create silver Tables 
--- ==================================================================================================
--- Script Purpose:
--- This script creates tables in the 'silver' schema, dropping existing tables if they already exist.
--- ==================================================================================================
+/*
+===============================================================================
+DDL Script: Create Silver Tables
+===============================================================================
+Script Purpose:
+    This script creates tables in the 'silver' schema, dropping existing tables 
+    if they already exist.
+	  Run this script to re-define the DDL structure of 'silver' Tables
+===============================================================================
+*/
 
 -- CRM Customer Info
 DROP TABLE IF EXISTS silver.crm_cust_info;
@@ -24,13 +28,12 @@ DROP TABLE IF EXISTS silver.crm_prd_info;
 
 CREATE TABLE silver.crm_prd_info (
     prd_id       INTEGER,
-	cat_id       VARCHAR(50),
     prd_key      VARCHAR(50),
     prd_nm       VARCHAR(50),
     prd_cost     INTEGER,
     prd_line     VARCHAR(50),
-    prd_start_dt DATE,
-    prd_end_dt   DATE,
+    prd_start_dt TIMESTAMP,
+    prd_end_dt   TIMESTAMP,
 dwh_create_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -41,9 +44,9 @@ CREATE TABLE silver.crm_sales_details (
     sls_ord_num  VARCHAR(50),
     sls_prd_key  VARCHAR(50),
     sls_cust_id  INTEGER,
-    sls_order_dt DATE,
-    sls_ship_dt  DATE,
-    sls_due_dt   DATE,
+    sls_order_dt INTEGER,
+    sls_ship_dt  INTEGER,
+    sls_due_dt   INTEGER,
     sls_sales    INTEGER,
     sls_quantity INTEGER,
     sls_price    INTEGER,
