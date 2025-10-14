@@ -3,12 +3,9 @@
 Data Segmentation Analysis
 ===============================================================================
 Purpose:
-    - To group entities (products, customers, etc.) into logical segments based 
-      on defined numeric or behavioral ranges.
-    - To better understand the relationship between different measures such as 
-      cost, revenue, and customer longevity.
-    - To enable targeted marketing, pricing, and operational strategies by 
-      identifying patterns within each segment.
+    - To group entities (products, customers, etc.) into logical segments based on defined numeric or behavioral ranges.
+    - To better understand the relationship between different measures such as cost, revenue and customer longevity.
+    - To enable targeted marketing, pricing, and operational strategies by identifying patterns within each segment.
 
 Key SQL Functions Used:
     - CASE: For defining range-based or conditional segments.
