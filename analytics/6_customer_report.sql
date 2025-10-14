@@ -3,16 +3,12 @@
 Customer Report
 ===============================================================================
 Purpose:
-    - To consolidate key customer metrics and behavioral insights into one 
-      analytical view.
-    - To provide a foundation for customer segmentation, KPI tracking, and 
-      retention analysis.
+    - To consolidate key customer metrics and behavioral insights into one analytical view.
+    - To provide a foundation for customer segmentation, KPI tracking and retention analysis.
 
 Highlights:
-    1. Gathers essential customer and transaction fields such as names, ages, 
-       and sales metrics.
-    2. Segments customers by both spending tiers (VIP, Regular, New) and 
-       demographic age groups.
+    1. Gathers essential customer and transaction fields such as names, ages and sales metrics.
+    2. Segments customers by both spending tiers (VIP, Regular, New) and demographic age groups.
     3. Aggregates customer-level metrics:
         • Total orders
         • Total sales
@@ -34,8 +30,7 @@ Key SQL Functions Used:
 
 -- ============================================================================
 --    Create Customer Report View
---    Purpose: To create a reusable gold-layer view with customer-level 
---             performance and behavioral insights.
+--    Purpose: To create a reusable gold-layer view with customer-level performance and behavioral insights.
 CREATE VIEW gold.report_customers AS
 WITH base_query AS ( -- Base Query: Retrieves essential transaction and customer fields
     SELECT
