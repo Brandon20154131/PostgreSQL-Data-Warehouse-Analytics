@@ -60,7 +60,14 @@ These insights empower stakeholders with key business metrics, enabling strategi
 data-warehouse-project/
 │
 ├── analytics/                          # SQL script for advanced analytics
-│   ├── master_EDA.sql                  # Master script that covers various analyses such as database exploration, measures and metrics, time-based trends, cumulative analytics, segmentation and more. 
+│   ├── 1_change_over_time.sql
+│   ├── 2_cumulative_analysis.sql
+│   ├── 3_data_segmentation.sql
+│   ├── 4_performance_analysis.sql
+│   ├── 5_part_to_whole.sql
+│   ├── 6_customer_report.sql
+│   ├── 7_product_report.sql
+│   ├── query_highlights.sql            # SQL script that highlights the most impressive and descriptive queries
 │
 ├── data warehouse/                     # Everything to build the data warehouse
 |   ├── datasets/                       # Raw datasets used for the project (ERP and CRM data)
