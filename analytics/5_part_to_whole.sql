@@ -4,10 +4,8 @@ Part-to-Whole Analysis
 ===============================================================================
 Purpose:
     - To measure how individual segments or entities contribute to a larger total.
-    - To identify which categories, regions, or customer groups are driving 
-      overall performance.
-    - Useful for understanding distribution, contribution ratios, and 
-      proportional impact within the business.
+    - To identify which categories, regions or customer groups are driving overall performance.
+    - Useful for understanding distribution, contribution ratios and proportional impact within the business.
 
 Key SQL Functions Used:
     - Window Functions: SUM() OVER() for calculating total sums across partitions.
