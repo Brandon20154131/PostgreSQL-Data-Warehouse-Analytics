@@ -3,16 +3,12 @@
 Performance Analysis
 ===============================================================================
 Purpose:
-    - To evaluate and compare performance across key dimensions such as 
-      customers, products, categories, and time periods.
-    - To identify top-performing customers or products and assess their 
-      year-over-year growth and performance against averages.
-    - To support business insights like customer retention, product success, 
-      and category contribution.
+    - To evaluate and compare performance across key dimensions such as customers, products, categories and time periods.
+    - To identify top-performing customers or products and assess their year-over-year growth and performance against averages.
+    - To support business insights like customer retention, product success and category contribution.
 
 Key SQL Functions Used:
-    - Window Functions: ROW_NUMBER(), LAG(), AVG(), PARTITION BY for ranking 
-      and comparative metrics.
+    - Window Functions: ROW_NUMBER(), LAG(), AVG(), PARTITION BY for ranking and comparative metrics.
     - Aggregate Functions: SUM(), COUNT(), ROUND() for performance measurement.
     - Conditional Logic: CASE for classifying performance trends.
 ===============================================================================
