@@ -3,8 +3,7 @@
 Cumulative Analysis
 ===============================================================================
 Purpose:
-    - To calculate running totals and rolling averages that show accumulated
-      progress or performance over time.
+    - To calculate running totals and rolling averages that show accumulated progress or performance over time.
     - To measure long-term growth trajectories or progressive totals.
     - To identify cumulative performance patterns and seasonal accumulation.
 
