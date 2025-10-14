@@ -1,6 +1,6 @@
 /*
 ===============================================================================
-HIGHLIGHTED QUERIES
+QUERY HIGHLIGHTS
 ===============================================================================
 Overview:
     Contains six curated analytical queries forming the foundation of the 
