@@ -131,3 +131,23 @@ SELECT
     END AS prev_change
 FROM year_product_sales
 ORDER BY 2, 1;
+
+
+-- ============================================================================
+--    Profit Margins 
+--    Purpose: show profit margins each product makes
+SELECT
+    p.category,
+    p.subcategory,
+    p.product_name,
+    SUM(f.sales_amount) as total_revenue,
+    SUM(f.quantity) as total_quantity,
+    MAX(f.price) as price,
+    MAX(p.cost) as cost,
+    SUM(f.quantity * (f.price - p.cost)) as profit,
+    CONCAT(ROUND(((SUM(f.quantity * (f.price - p.cost))::DECIMAL / SUM(f.sales_amount)) * 100),2),'%') AS profit_margin
+FROM gold.fact_sales f
+LEFT JOIN gold.dim_products p
+ON f.product_key = p.product_key
+GROUP BY 1,2,3
+ORDER BY 1,2,3;
