@@ -9,25 +9,28 @@ Overview:
     business intelligence and performance monitoring.
 
 Included Analyses:
-    1️ Rolling 3-Month Average
+	1️	Profit margins 
+		- Shows the profit margins each product makes
+		
+    2️ Rolling 3-Month Average
         - Smooths short-term fluctuations and reveals underlying trends.
 
-    2️ Sales and Quantity by Category and Subcategory
+    3️ Sales and Quantity by Category and Subcategory
         - Breaks down category-level performance to identify top revenue drivers.
 
-    3️ Yearly Product Performance vs. Average and Previous Year
+    4️ Yearly Product Performance vs. Average and Previous Year
         - Combines moving averages and lag functions to evaluate product trends 
           against both historical averages and prior year performance.
 
-    4️ Customer Tier Contribution to Overall Sales
+    5️ Customer Tier Contribution to Overall Sales
         - Segments customers by tenure and total spend (VIP, Regular, New) and 
           measures each segment’s contribution to total revenue.
 
-    5️ Customer Report View
+    6️ Customer Report View
         - Builds a reusable analytical view consolidating customer behavior 
           (recency, frequency, value) and segmentation insights.
 
-    6️ Product Report View
+    7️ Product Report View
         - Aggregates core product-level KPIs such as revenue, recency, and 
           sales frequency, with performance tier classification.
 
@@ -39,6 +42,27 @@ Key Highlights:
         - Conditional Logic (CASE)
 ===============================================================================
 */
+
+
+
+-- ============================================================================
+--    Profit margins 
+--    Purpose: Shows the profit margins each product makes
+SELECT
+    p.category,
+    p.subcategory,
+    p.product_name,
+    SUM(f.sales_amount) as total_revenue,
+    SUM(f.quantity) as total_quantity,
+    MAX(f.price) as price,
+    MAX(p.cost) as cost,
+    SUM(f.quantity * (f.price - p.cost)) as profit,
+    CONCAT(ROUND(((SUM(f.quantity * (f.price - p.cost))::DECIMAL / SUM(f.sales_amount)) * 100),2),'%') AS profit_margin
+FROM gold.fact_sales f
+LEFT JOIN gold.dim_products p
+ON f.product_key = p.product_key
+GROUP BY 1,2,3
+ORDER BY 1,2,3;
 
 
 -- ============================================================================
