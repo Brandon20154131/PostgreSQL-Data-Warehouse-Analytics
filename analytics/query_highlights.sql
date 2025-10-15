@@ -3,7 +3,7 @@
 QUERY HIGHLIGHTS
 ===============================================================================
 Overview:
-    Contains six curated analytical queries forming the foundation of the 
+    Contains seven curated analytical queries forming the foundation of the 
     Gold Layer in a modern data warehouse. Each query transforms curated 
     transactional data into high-value, insight-ready datasets for reporting, 
     business intelligence and performance monitoring.
