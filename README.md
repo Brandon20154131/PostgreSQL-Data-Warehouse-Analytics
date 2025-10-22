@@ -60,6 +60,9 @@ These insights empower stakeholders with key business metrics, enabling strategi
 data-warehouse-project/
 │
 ├── analytics/                          # SQL script for advanced analytics
+│   ├── Visualisation/
+│   │   ├── screenshot of visualisation - Must go to ' https://public.tableau.com/app/profile/brandon.le5810/vizzes '
+│   |
 │   ├── 1_change_over_time.sql
 │   ├── 2_cumulative_analysis.sql
 │   ├── 3_data_segmentation.sql
